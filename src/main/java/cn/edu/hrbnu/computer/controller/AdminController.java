@@ -13,6 +13,8 @@ public class AdminController {
     @Autowired
     private AdminService adminService;
 
+
+    // yaque
     @RequestMapping("/loginDeal")
     public String loginAdmin(Model model, Admin admin) {
         Admin remoteAdmin = adminService.queryByName(admin.getName());
@@ -27,6 +29,7 @@ public class AdminController {
         }
     }
 
+    //yaque
     @RequestMapping("/main")
     public String Main(Model model, Admin admin) {
         return "admin/main";
